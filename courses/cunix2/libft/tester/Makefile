@@ -1,7 +1,7 @@
 .DEFAULT_GOAL	:= m
 UTILS			= $(addprefix utils/, sigsegv.cpp color.cpp check.cpp leaks.cpp)
 PARENT_DIR		= $(shell dirname $(shell pwd))
-LIBFT_PATH		= ../libft
+LIBFT_PATH		= ../../libft/stdlib
 TESTS_PATH		= tests/
 MANDATORY		= abs div bzero memcpy memmove memchr memcmp isalpha isdigit \
 				isascii toupper tolower strchr strrchr strncmp strnstr \
