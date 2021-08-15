@@ -3,26 +3,26 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-void ft_bzero(void *s, size_t n);
-char *ft_strdup(const char *s1);
-int ft_strncmp(const char *s1, const char *s2, size_t n);
-char *ft_strchr(const char *s, int c);
-char *ft_strrchr(const char *s, int c);
-int ft_isalpha(int c);
-int ft_isdigit(int c);
-int ft_isascii(int c);
-int ft_toupper(int c);
-int ft_tolower(int c);
+void ft_bzero(void *s, size_t n );
+char *ft_strdup(const char *str1);
+int ft_strcmp(char *str1, char *str2, size_t n);
+char *ft_strchr(const char *str, int ch);
+char *ft_strrchr(const char *str, int sym);
+int ft_isalpha(int ch);
+int ft_isdigit(int ch);
+int ft_isascii(int ch);
+int ft_toupper(int ch);
+int ft_tolower(int ch);
 
-int ft_abs(int i);
+int ft_abs(int num);
 div_t ft_div(int numer, int denom);
-char *ft_strstr(const char *haystack, const char *needle);
-char *ft_strnstr(const char *haystack, const char *needle, size_t len);
-void *ft_memset(void *b, int c, size_t len);
-void *ft_memcpy(void *restrict_dst, const void *restrict_src, size_t n);
-void *ft_memccpy(void *restrict_dst, const void *restrict_src, int c, size_t n);
-void *ft_memmove(void *dst, const void *src, size_t len);
-void *ft_memchr(const void *s, int c, size_t n);
+char *ft_strstr(const char *str1, const char *str2);
+char *ft_strnstr(char *big, char *little, size_t len);
+void *ft_memset(void *buf, int ch, size_t count);
+void *ft_memcpy(void *dest, const void *src, unsigned int cnt);
+void *ft_memccpy(void *dest, const void *src, int ch, size_t cnt);
+void *ft_memmove(void *dest, const void *src, unsigned int n);
+void *ft_memchr(register const PTR src_void, int c, size_t length);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void ft_striter(char* s, void (*f)(char*));
