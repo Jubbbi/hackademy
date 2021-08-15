@@ -1,5 +1,5 @@
-OBJ:=build/obj/bzero.o build/obj/ft_strdup.o build/obj/ft_strncmp.o build/obj/ft_strchr.o build/obj/ft_strrchr.o build/obj/ft_isalpha.o build/obj/ft_isdigit.o build/obj/ft_isascii.o build/obj/ft_toupper.o build/obj/ft_tolower.o
-CFLAGS:=-I .
+OBJ:=build/obj/bzero.o build/obj/strdup.o build/obj/strncmp.o build/obj/strchr.o build/obj/strrchr.o build/obj/isalpha.o build/obj/isdigit.o build/obj/isascii.o build/obj/toupper.o build/obj/tolower.o
+CFLAGS:=-I . -Wall
 CC:=gcc
 
 all: build_dir obj_comp build_lib
@@ -19,10 +19,11 @@ build/obj/%.o: %.c
 
 build_lib:
 	echo Start build lib
-	ar rcs build/lib/libft.a $(OBJ) 
+	ar rcs libft.a $(OBJ)
 	echo Finish build lib
 
 .PHONY: clean
 clean:
 	rm -rf build
+	rm -f libft.a
 

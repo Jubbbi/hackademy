@@ -3,8 +3,8 @@
 
 char *ft_strdup(const char *str1) {
     char *str2 = malloc(sizeof(str1));
-    char *c1 = str1;
     char *c2 = str2;
+    const char *c1 = str1;
     while (*c1) {
         *c2 = *c1;
         c1++;
